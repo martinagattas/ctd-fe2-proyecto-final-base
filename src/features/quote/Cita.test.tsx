@@ -118,7 +118,7 @@ describe("Cita", () => {
             });
         });
     });
-    describe("Cuando hacemos clic en Borrar", () => {
+    describe("Cuando hacemos clic en el botón Borrar", () => {
         beforeEach(() => {
             render(<Cita />);
         });
