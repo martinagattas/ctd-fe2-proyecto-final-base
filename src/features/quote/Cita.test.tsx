@@ -1,10 +1,7 @@
 import { rest } from "msw";
-import App from "../../App";
 import { setupServer } from "msw/node";
 import { render } from "../../test-utils";
 import { screen, waitFor } from "@testing-library/react";
-import { Provider } from "react-redux";
-import { store } from "../../app/store";
 import { API_URL } from "../../app/constants";
 import userEvent from "@testing-library/user-event";
 import Cita from "./Cita";
