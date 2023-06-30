@@ -14,6 +14,7 @@ import { noticiasNormalizadas } from "./noticiaAPI";
 // Single-responsability: se creó un nuevo componente para Noticia y otro para Modal, en lugar de darle la responsabilidad de renderización de los mismos al componente Noticias
 // Liskov substitution: los componentes Noticia y Modal son ahora componentes hijos del componente Noticias, heredando los atributos de esta última
 // Interface segregation: cada componente implementa sólo las interfaces que necesita, descartando así métodos que no le son de utilidad
+// Además, se crearon archivos auxiliares para llamados a la API, tipos y funciones, de forma tal que el código pueda ser reutilizado
 
 const Noticias = () => {
   const [noticias, setNoticias] = useState<INoticiasNormalizadas[]>([]);
