@@ -10,6 +10,11 @@ import Modal from "./Modal";
 import Noticia from "./Noticia";
 import { noticiasNormalizadas } from "./noticiaAPI";
 
+// Se realizó una refactorización del código aplicando principios SOLID tales como:
+// Single-responsability: se creó un nuevo componente para Noticia y otro para Modal, en lugar de darle la responsabilidad de renderización de los mismos al componente Noticias
+// Liskov substitution: los componentes Noticia y Modal son ahora componentes hijos del componente Noticias, heredando los atributos de esta última
+// Interface segregation: cada componente implementa sólo las interfaces que necesita, descartando así métodos que no le son de utilidad
+
 const Noticias = () => {
   const [noticias, setNoticias] = useState<INoticiasNormalizadas[]>([]);
   const [modal, setModal] = useState<INoticiasNormalizadas | null>(null);
